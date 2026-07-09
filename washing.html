@@ -394,7 +394,7 @@
     <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap scroll-reveal fade-up" id="details">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-surface-container p-8 md:p-12 border border-outline/20">
             <div class="relative h-[400px] overflow-hidden border border-outline/10">
-                <img alt="High Pressure Concrete Washing" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHy9X0a4bLSywGp4qctCnG19NGSr07BThJcw2ckXjlBCq0v_Em7rqWTX8K4ipIVHM5VeESn5rvH4TOLQgMKfxdjICK_j84kRviFwvwS4YCwYdmT5ZUgeyTgBu_h8Dj3q_FLixzhBeJyhFILrxAO8RoA_Dg-Aku1o9cUb3OBEQVWWxxcwYtA_eBFDVl4veqnWz6djVLJIsBo5N82eyCk32J7v0m4PVU6pkLjNK4p_Ct_SFngKMozcV3qQ"/>
+                <img alt="High Pressure Concrete Washing" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHy9X0a4bLSywGp4qctCnG19NGSr07BThJcw2ckXjlBCq0v_Em7rqWTX8K4ipIVHM5VeESn5rvH4TOLQgMKfxdjICK_j84kRviFwvwS4YCwYdmT5ZUgeyTgBu_h8Dj3q_FLixzhBeJyhFILrxAO8RoA_Dg-Aku1o9cUb3OBEQVWWxxcwYtA_eBFDVl4veqnWz6djVLJIsBo5N82eyCk32J7v0m4PVU6pkLjNK4p_Ct_SFngKMozcV3qQ" loading="lazy" />
             </div>
             <div>
                 <span class="font-label-caps text-label-caps text-primary uppercase mb-2 block">Surgical Cleaning Care</span>
@@ -522,7 +522,7 @@
         });
 
         // Custom Cursor Implementation (Desktop Only)
-        if (window.innerWidth >= 768) {
+        if (window.innerWidth >= 768 && !window.matchMedia('(pointer: coarse)').matches) {
             const cursorDot = document.createElement('div');
             cursorDot.id = 'cursor-dot';
             document.body.appendChild(cursorDot);
@@ -540,11 +540,12 @@
             window.addEventListener('mousemove', (e) => {
                 mouseX = e.clientX;
                 mouseY = e.clientY;
-                cursorDot.style.left = `${mouseX}px`;
-                cursorDot.style.top = `${mouseY}px`;
             });
 
             function animateTrail() {
+                cursorDot.style.left = `${mouseX}px`;
+                cursorDot.style.top = `${mouseY}px`;
+
                 // Lerp for the ghost cursor
                 trailX += (mouseX - trailX) * 0.15;
                 trailY += (mouseY - trailY) * 0.15;

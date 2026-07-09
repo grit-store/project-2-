@@ -677,7 +677,7 @@
         });
 
         // Custom Cursor Implementation (Desktop Only)
-        if (window.innerWidth >= 768) {
+        if (window.innerWidth >= 768 && !window.matchMedia('(pointer: coarse)').matches) {
             const cursorDot = document.createElement('div');
             cursorDot.id = 'cursor-dot';
             document.body.appendChild(cursorDot);
@@ -695,11 +695,12 @@
             window.addEventListener('mousemove', (e) => {
                 mouseX = e.clientX;
                 mouseY = e.clientY;
-                cursorDot.style.left = `${mouseX}px`;
-                cursorDot.style.top = `${mouseY}px`;
             });
 
             function animateTrail() {
+                cursorDot.style.left = `${mouseX}px`;
+                cursorDot.style.top = `${mouseY}px`;
+
                 // Lerp for the ghost cursor
                 trailX += (mouseX - trailX) * 0.15;
                 trailY += (mouseY - trailY) * 0.15;
