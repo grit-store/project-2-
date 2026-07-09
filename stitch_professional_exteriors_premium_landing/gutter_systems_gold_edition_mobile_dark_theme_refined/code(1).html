@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gold Edition Gutter Systems | Professional Exteriors</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Design System Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "teal-accent": "#226D7A",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#fdad67",
+                    "off-white": "#F8FAFC",
+                    "outline-variant": "#c2c6d8",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#001849",
+                    "on-tertiary-container": "#fff6f4",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface-container-lowest": "#131313",
+                    "on-surface": "#ffffff",
+                    "surface-bright": "#fcf9f8",
+                    "primary": "#D4AF37",
+                    "surface-variant": "#333333",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#ebe7e7",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#ffb59d",
+                    "tertiary-fixed": "#ffdbd0",
+                    "surface-container": "#131313",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#ffdcc2",
+                    "on-primary-fixed-variant": "#003fa4",
+                    "on-secondary-fixed": "#2e1500",
+                    "on-background": "#ffffff",
+                    "surface-container-low": "#1a1a1a",
+                    "sky-tint": "#B0E0E9",
+                    "primary-container": "#0066ff",
+                    "on-primary-container": "#f8f7ff",
+                    "on-secondary-container": "#131313",
+                    "background": "#131313",
+                    "secondary": "#D4AF37",
+                    "surface-dim": "#dcd9d9",
+                    "inverse-primary": "#b3c5ff",
+                    "primary-fixed": "#dae1ff",
+                    "slate-gray": "#1E293B",
+                    "outline": "#D4AF37",
+                    "on-secondary-fixed-variant": "#6d3a00",
+                    "tertiary-container": "#cc4204",
+                    "primary-fixed-dim": "#b3c5ff",
+                    "on-tertiary-fixed": "#390c00",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#cccccc",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface": "#131313",
+                    "on-tertiary-fixed-variant": "#832600",
+                    "inverse-surface": "#313030",
+                    "surface-tint": "#0054d6",
+                    "tertiary": "#a33200",
+                    "secondary-fixed-dim": "#ffb77b",
+                    "obsidian": "#131313",
+                    "champagne-gold": "#D4AF37"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "32px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "stack-sm": "8px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "stack-md": "16px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "headline-md": [
+                            "Syne"
+                    ],
+                    "headline-lg": [
+                            "Syne"
+                    ],
+                    "display-lg-mobile": [
+                            "Syne"
+                    ],
+                    "label-caps": [
+                            "Inter"
+                    ],
+                    "display-lg": [
+                            "Syne"
+                    ],
+                    "headline-lg-mobile": [
+                            "Syne"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "button": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "48px",
+                            {
+                                    "lineHeight": "52px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-lg": [
+                            "80px",
+                            {
+                                    "lineHeight": "88px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "button": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .cinematic-reveal {
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        /* Mobile Nav Override logic - Hiding top row text links */
+        @media (max-width: 767px) {
+            .mobile-nav-hide {
+                display: none !important;
+            }
+            /* Adjust padding for mobile since JSON injects desktop padding */
+            .mobile-padding-override {
+                padding-left: theme('spacing.margin-mobile') !important;
+                padding-right: theme('spacing.margin-mobile') !important;
+            }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden selection:bg-champagne-gold selection:text-obsidian">
+<!-- TopAppBar / Mobile Navigation Shell -->
+<header class="bg-obsidian/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-white/10 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto mobile-padding-override">
+<a class="font-headline-md text-headline-md font-bold text-champagne-gold tracking-tighter hover:text-white transition-all duration-300" href="#">
+                PE
+            </a>
+<!-- Desktop Links (Hidden on Mobile per rules) -->
+<nav class="hidden md:flex gap-6 items-center mobile-nav-hide">
+<a class="font-button text-button text-on-surface-variant hover:text-champagne-gold transition-colors" href="#">Roofing</a>
+<a class="font-button text-button text-champagne-gold border-b-2 border-champagne-gold pb-1 opacity-80 transition-opacity" href="#">Gutters</a>
+<a class="font-button text-button text-on-surface-variant hover:text-champagne-gold transition-colors" href="#">Washing</a>
+<a class="font-button text-button text-on-surface-variant hover:text-champagne-gold transition-colors" href="#">Storm Damage</a>
+<a class="font-button text-button text-on-surface-variant hover:text-champagne-gold transition-colors" href="#">Gallery</a>
+<a class="font-button text-button text-on-surface-variant hover:text-champagne-gold transition-colors" href="#">Contact</a>
+</nav>
+<button class="hidden md:inline-flex bg-champagne-gold text-obsidian font-button text-button px-6 py-3 rounded hover:bg-champagne-gold/90 transition-colors mobile-nav-hide">
+                Get a Quote
+            </button>
+<button class="md:hidden text-white focus:outline-none px-2">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-[72px] pb-[80px] md:pb-0">
+<!-- Cinematic Hero Section -->
+<section class="relative h-[85vh] md:h-[90vh] w-full flex flex-col justify-end px-margin-mobile md:px-margin-desktop pb-section-gap overflow-hidden bg-obsidian">
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center w-full h-full opacity-60 cinematic-reveal object-cover opacity-100 translate-y-0" data-alt="A striking architectural photograph of a modern luxury home exterior focusing on the precision of sleek, metallic gold-tinted gutter systems contrasting beautifully against a matte charcoal gray roof and pristine white stucco walls. High-contrast lighting highlights the structural rigidity and premium materials. Pristine, minimalist aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhMCUJN_-z2RiUhGcQzwB9hmBmiRrS6n-iuYNhATftodVVmukBi-h-H8bydQV0vmu-1hpJZB28XE_JVPzyb94yqsbPlSLc4u_HfVFyFfZRf2buDgCZqLewI-YMBIpjJu_tmHmYV5DKjhwMBEOlrcGSqOCx6umafEcn82CNV1xebEmPfvWnYGp1_d68W60IdVth37vV_Tk0AM5dXOSNxcsy9rO8_UZxmjLDmYMi1iGWM_-4mbOhv9Y7_Q'); background-size: cover; background-position: center;"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/50 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto w-full cinematic-reveal opacity-100 translate-y-0 px-margin-mobile" id="hero-content">
+<span class="inline-block px-3 py-1 bg-transparent border border-champagne-gold/30 text-champagne-gold font-label-caps text-label-caps mb-stack-md tracking-[0.15em] uppercase rounded-sm">
+                    Gold Edition Portfolio
+                </span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-stack-sm drop-shadow-lg leading-tight">
+                    Architectural <br/><span class="text-champagne-gold">Perfection.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-surface-variant/80 max-w-md mb-stack-lg border-l-2 border-champagne-gold pl-4 text-[#cccccc]">
+                    Architectural-grade water management systems designed for absolute structural integrity and unmatched aesthetic precision.
+                </p>
+<button class="bg-champagne-gold text-obsidian font-button text-button px-8 py-4 rounded-none hover:bg-champagne-gold/90 transition-colors inline-flex items-center gap-2 uppercase tracking-wider">
+                    Explore Systems <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</button>
+</div>
+</section>
+<!-- Stacked Systems Architecture -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-obsidian border-t border-white/5">
+<div class="max-w-container-max mx-auto">
+<div class="mb-stack-lg cinematic-reveal opacity-0 translate-y-10 px-margin-mobile">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white mb-stack-sm">
+                        Engineered Perfection
+                    </h2>
+<div class="w-12 h-1 bg-champagne-gold mb-4"></div>
+<p class="font-body-md text-body-md text-surface-variant/80 max-w-xl text-[#cccccc]">
+                        Our Gold Edition gutters are forged from heavy-gauge alloys, featuring seamless integration profiles that align perfectly with modern architectural drafting standards.
+                    </p>
+</div>
+<div class="flex flex-col gap-stack-lg">
+<!-- System Card 1 -->
+<div class="group relative bg-white/5 backdrop-blur-sm border border-white/10 p-stack-md md:p-stack-lg overflow-hidden cinematic-reveal opacity-0 translate-y-10 transition-all duration-500 hover:border-champagne-gold/50">
+<div class="aspect-[4/3] w-full mb-stack-md overflow-hidden bg-obsidian relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up macro photography of a flawless, heavy-gauge seamless gutter joint in a subtle bronze/gold finish. The edge is sharp and precise against a smooth gallery-white background. The lighting is studio-quality, emphasizing the flawless brushed metal texture and architectural grade construction." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaV33c1lvcmy2OjyU-gO_WRZkcKz57N82-n9XpUZGvKtqeeHymH7maQDeDx76Ib-x0-giYN7DsPeYBmQ1PiZEZHLHgYMLMi6AHxzo5oIx6xL1Y5fIx5hliGhMuCYqr1Ae_QY7egFdOy6iGidyLo2YeNqrmY2WNXbuQTjxJB4g8-rY-h9gNONdIS1JxcgpEi4_AOvZ8At8CxhWv2YFGCk4FTRhywEYfivFfJUGTkoZP7hxIB2DTIQyf5Q"/>
+<div class="absolute top-4 left-4 bg-obsidian/80 backdrop-blur-md text-champagne-gold font-label-caps text-label-caps px-2 py-1 border border-white/10 rounded-sm">01. Seamless</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Box Profile Systems</h3>
+<p class="font-body-md text-body-md text-[#cccccc] mb-stack-sm pb-stack-sm border-b border-white/10">
+                            Rigid, minimalist geometry designed for flat-roof modernism. Maximizes volume capacity while maintaining a severe, disciplined silhouette.
+                        </p>
+<a class="inline-flex items-center gap-2 font-button text-button text-champagne-gold hover:text-white transition-colors uppercase tracking-widest text-[12px]" href="#">
+                            View Specifications <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- System Card 2 -->
+<div class="group relative bg-white/5 backdrop-blur-sm border border-white/10 p-stack-md md:p-stack-lg overflow-hidden cinematic-reveal opacity-0 translate-y-10 transition-all duration-500 hover:border-champagne-gold/50">
+<div class="aspect-[4/3] w-full mb-stack-md overflow-hidden bg-obsidian relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="High-contrast architectural detail shot of a sophisticated half-round gutter system mounted on exposed heavy-duty rafters. The metal features a refined matte gold sheen. Deep shadows are cast against the stark, modern slate-gray exterior wall of a high-end luxury property." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqS5tP-OZDe819MnlnQ-jNssZhyXmTI3BctdnUMj7K1WYI51vpkPV5fhxmT4JxtlnVv0xYg0RD_qYTUzFByBhrwivN3JEG8mDLUw9-LLD8f8DXY0KdAgamMhSpK3PXoKjTcTZkmLC7bLRi8GkQ6N9lNULO7i4gHNqDFP5Nod99BFNgnvoJUyjPlmpu3Dj8eXrkOlfQPNOKTfXUzg87WqU7cS7IDACvLPgwLwEXAaI7VO3fJFs0R-0I0Q"/>
+<div class="absolute top-4 left-4 bg-obsidian/80 backdrop-blur-md text-champagne-gold font-label-caps text-label-caps px-2 py-1 border border-white/10 rounded-sm">02. Heritage</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Half-Round Extrusions</h3>
+<p class="font-body-md text-body-md text-[#cccccc] mb-stack-sm pb-stack-sm border-b border-white/10">
+                            A nod to classic European architecture, re-engineered with thick-gauge metals and hidden bracket technology for uninterrupted lines.
+                        </p>
+<a class="inline-flex items-center gap-2 font-button text-button text-champagne-gold hover:text-white transition-colors uppercase tracking-widest text-[12px]" href="#">
+                            View Specifications <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Highlights (Dark Section) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-obsidian text-white border-t border-white/5">
+<div class="max-w-container-max mx-auto">
+<div class="mb-stack-lg border-b border-white/10 pb-stack-md flex justify-between items-end cinematic-reveal px-margin-mobile opacity-100 translate-y-0">
+<div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white mb-2">
+                            Recent Installations
+                        </h2>
+<div class="w-12 h-1 bg-champagne-gold mb-2"></div>
+<p class="font-label-caps text-label-caps text-champagne-gold tracking-widest uppercase">
+                            Gold Edition Case Studies
+                        </p>
+</div>
+</div>
+<div class="flex flex-col gap-stack-lg">
+<!-- Project 1 -->
+<div class="relative group cursor-pointer cinematic-reveal opacity-100 translate-y-0 border border-white/10 p-2 bg-white/5 backdrop-blur-sm">
+<div class="w-full h-[60vh] overflow-hidden bg-black relative">
+<div class="absolute inset-0 z-10 bg-obsidian/40 transition-colors duration-500 group-hover:bg-transparent"></div>
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A cinematic wide shot of a multi-million dollar contemporary estate at twilight. The interior lights glow warmly, while the exterior features a striking combination of black cladding and pristine white trim, unified by an impeccable, custom-milled Gold Edition gutter system reflecting the evening light. High luxury, precise architectural lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjNFMEUAX_XTIlToagZTKZYSEKqZHQyMb3DKBiHb3v_Bv9ytqLpGHG92LXXqyETVTT5UPfyU2ZYenh9dFVH6XJS7fdDeS2_QVEko5tzVPMxGbo4QLwcPtNYvbac54S2nu4snt3IKLDtr8Wrl7wQRtCE1pJn-mP-J1pKeoBApReEKYm5eeBHtiofSLBOKc2GH2b7R4f9IfqFm1GDp-Erno6Jq0MjQeEJNam52XpNqvuv4gkIbi36r0vTA"/>
+<div class="absolute bottom-0 left-0 w-full p-stack-md bg-gradient-to-t from-obsidian via-obsidian/80 to-transparent z-20">
+<h4 class="font-headline-md text-headline-md text-champagne-gold mb-1 drop-shadow-md">The Glass House</h4>
+<p class="font-body-md text-body-md text-white/90">Custom Box Profile • Matte Obsidian Finish</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-stack-lg text-center cinematic-reveal opacity-100 translate-y-0">
+<button class="bg-transparent border border-champagne-gold text-champagne-gold font-button text-button px-8 py-4 hover:bg-champagne-gold hover:text-obsidian transition-colors inline-flex items-center gap-2 uppercase tracking-wider">
+                        View Full Gallery <span class="material-symbols-outlined text-[18px]">north_east</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer JSON Execution -->
+<footer class="bg-obsidian w-full py-[80px] border-t border-white/10 px-margin-mobile">
+<div class="grid grid-cols-1 gap-stack-lg max-w-container-max mx-auto px-6">
+<div class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-white">
+                Professional Exteriors
+            </div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-surface-variant/60 text-[#cccccc] hover:text-champagne-gold transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-surface-variant/60 text-[#cccccc] hover:text-champagne-gold transition-colors duration-200" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-surface-variant/60 text-[#cccccc] hover:text-champagne-gold transition-colors duration-200" href="#">Warranty Details</a>
+<a class="font-body-md text-body-md text-surface-variant/60 text-[#cccccc] hover:text-champagne-gold transition-colors duration-200" href="#">Service Areas</a>
+</div>
+<div class="font-body-md text-body-md text-[#cccccc]/60 mt-stack-md pt-stack-md border-t border-white/5">
+                © 2024 Professional Exteriors. Architectural Integrity &amp; Precision.
+            </div>
+</div>
+</footer>
+<!-- Intersection Observer for Cinematic Reveals -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initiate Hero animation slightly after load
+            setTimeout(() => {
+                const heroEl = document.getElementById('hero-content');
+                if(heroEl) {
+                    heroEl.classList.remove('opacity-0', 'translate-y-10');
+                    heroEl.classList.add('opacity-100', 'translate-y-0');
+                }
+            }, 150);
+
+            // Scroll Reveals
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        // Optional: Unobserve after reveal for one-time animation
+                        // observer.unobserve(entry.target);
+                    }
+                });
+            }, { 
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            document.querySelectorAll('.cinematic-reveal').forEach(el => {
+                if (el.id !== 'hero-content') {
+                    observer.observe(el);
+                }
+            });
+        });
+    </script>
+</body></html>

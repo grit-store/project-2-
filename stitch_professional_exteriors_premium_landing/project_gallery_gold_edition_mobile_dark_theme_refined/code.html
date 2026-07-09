@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gallery - Professional Exteriors</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "teal-accent": "#226D7A",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#fdad67",
+                        "off-white": "#F8FAFC",
+                        "outline-variant": "#c2c6d8",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#001849",
+                        "on-tertiary-container": "#fff6f4",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1c1b1b",
+                        "surface-bright": "#fcf9f8",
+                        "primary": "#0050cb",
+                        "surface-variant": "#e5e2e1",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#ebe7e7",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ffb59d",
+                        "tertiary-fixed": "#ffdbd0",
+                        "surface-container": "#f0edec",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#ffdcc2",
+                        "on-primary-fixed-variant": "#003fa4",
+                        "on-secondary-fixed": "#2e1500",
+                        "on-background": "#1c1b1b",
+                        "surface-container-low": "#f6f3f2",
+                        "sky-tint": "#B0E0E9",
+                        "primary-container": "#0066ff",
+                        "on-primary-container": "#f8f7ff",
+                        "on-secondary-container": "#763f00",
+                        "background": "#fcf9f8",
+                        "secondary": "#8c4f10",
+                        "surface-dim": "#dcd9d9",
+                        "inverse-primary": "#b3c5ff",
+                        "primary-fixed": "#dae1ff",
+                        "slate-gray": "#1E293B",
+                        "outline": "#727687",
+                        "on-secondary-fixed-variant": "#6d3a00",
+                        "tertiary-container": "#cc4204",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "on-tertiary-fixed": "#390c00",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#424656",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface": "#fcf9f8",
+                        "on-tertiary-fixed-variant": "#832600",
+                        "inverse-surface": "#313030",
+                        "surface-tint": "#0054d6",
+                        "tertiary": "#a33200",
+                        "secondary-fixed-dim": "#ffb77b",
+                        "obsidian": "#131313",
+                        "champagne-gold": "#D4AF37"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "stack-sm": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "stack-md": "16px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Syne"],
+                        "headline-lg": ["Syne"],
+                        "display-lg-mobile": ["Syne"],
+                        "label-caps": ["Inter"],
+                        "display-lg": ["Syne"],
+                        "headline-lg-mobile": ["Syne"],
+                        "body-lg": ["Inter"],
+                        "button": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "700" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "display-lg": ["80px", { "lineHeight": "88px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "button": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        .reveal-item.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px; /* margin-mobile */
+            padding: 20px; /* margin-mobile */
+        }
+        
+        @media (min-width: 768px) {
+            .masonry-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+                padding: 32px;
+            }
+        }
+
+        .gallery-card {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        .gallery-image-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 125%; /* 4:5 aspect ratio */
+            overflow: hidden;
+            background-color: #131313;
+        }
+
+        .gallery-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: grayscale(10%) contrast(110%);
+            transition: transform 0.6s ease;
+        }
+        
+        .gallery-card:hover .gallery-image {
+            transform: scale(1.02);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 24px;
+            background: linear-gradient(to top, rgba(19, 19, 19, 0.9) 0%, rgba(19, 19, 19, 0) 100%);
+            color: white;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+
+        .gallery-card:hover .gallery-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-obsidian text-surface-container-lowest antialiased min-h-screen flex flex-col selection:bg-champagne-gold selection:text-obsidian">
+<!-- TopNavBar (Mobile: md:hidden logic applied, but rendering full bar as per JSON for desktop viewability, hiding nav links on mobile) -->
+<nav class="fixed top-0 w-full z-50 bg-obsidian/90 backdrop-blur-md border-b border-white/10 shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-champagne-gold tracking-tighter">
+            PE
+        </div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex space-x-6">
+<a class="font-button text-button text-surface-variant/80 hover:text-champagne-gold transition-colors duration-300" href="#">Roofing</a>
+<a class="font-button text-button text-surface-variant/80 hover:text-champagne-gold transition-colors duration-300" href="#">Gutters</a>
+<a class="font-button text-button text-surface-variant/80 hover:text-champagne-gold transition-colors duration-300" href="#">Washing</a>
+<a class="font-button text-button text-surface-variant/80 hover:text-champagne-gold transition-colors duration-300" href="#">Storm Damage</a>
+<a class="font-button text-button text-champagne-gold border-b-2 border-champagne-gold pb-1 Active: opacity-80 transition-opacity" href="#">Gallery</a>
+<a class="font-button text-button text-surface-variant/80 hover:text-champagne-gold transition-colors duration-300" href="#">Contact</a>
+</div>
+<button class="hidden md:block font-button text-button bg-champagne-gold text-obsidian px-6 py-3 rounded-none hover:bg-champagne-gold/90 uppercase tracking-wider transition-colors">
+            Get a Quote
+        </button>
+<!-- Mobile Menu Icon (Simplified for pure UI demo) -->
+<button class="md:hidden text-surface-container-lowest">
+<span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+</button>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[88px] pb-section-gap">
+<!-- Header Section -->
+<header class="px-margin-mobile md:px-margin-desktop py-16 max-w-container-max mx-auto reveal-item is-visible px-6">
+<div class="inline-block bg-transparent border border-champagne-gold/30 text-champagne-gold font-label-caps text-label-caps uppercase tracking-widest px-3 py-1 mb-6 rounded-sm">
+                PORTFOLIO
+            </div>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-surface-container-lowest mb-6 px-4 w-full">
+                Gold Edition <br/><span class="text-champagne-gold">Gallery</span>
+</h1>
+<p class="font-body-lg text-body-lg text-surface-variant/80 max-w-2xl px-4">
+                A curated selection of our most prestigious architectural exterior transformations. Precision engineering meets uncompromising aesthetic standards.
+            </p>
+</header>
+<!-- Masonry Grid -->
+<section class="max-w-container-max mx-auto">
+<div class="masonry-grid">
+<!-- Item 1 -->
+<div class="gallery-card reveal-item is-visible">
+<div class="gallery-image-wrapper">
+<img class="gallery-image" data-alt="A striking modern luxury home exterior featuring a sleek, flat dark charcoal roof, expansive floor-to-ceiling glass windows, and crisp white stucco walls. The lighting is high-key and bright, emphasizing structural precision. High-contrast, slightly desaturated architectural photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtzC4TwhnjlhHE6PfjhuTO-SDLhr-4zIEdVCL2zve3IlXJmJX9CqXSS5Ucj2axBaAbIO1hMTsrWTuAaQY7VEQi9uguUiEPSiHzfwAg_Y8hcTn1c4rxYZpo_oUtgAeIhHY_wb2S6b-v3uyzplSiXryuUluwjXCEEXorTanXNBl6ar-KiYInmHeoYXhpwtnp3HYJ97NfXMDnQ2CJvieUNbhLFkYmWtF9iF7O20G_nRTL5d4N243IPmB5EA"/>
+</div>
+<div class="gallery-overlay">
+<div class="font-label-caps text-label-caps tracking-widest mb-2 opacity-80 text-champagne-gold">RESIDENTIAL ROOFING</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-surface-container-lowest">The Glasshouse Estate</h3>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="gallery-card reveal-item">
+<div class="gallery-image-wrapper" style="padding-bottom: 150%;">
+<img class="gallery-image" data-alt="Close up architectural detail of a premium seamless copper gutter system against stark white painted brick. The copper has a slight patina but shines cleanly in bright sunlight. The composition is highly structured and geometric, shot in a high-contrast, professional light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOTLHIY-bhKOux0JSO9WTLB2wbJYKS_9PeNPea9x0mlWQ5BZezP6e4piMt0hspbtpxmkQ6XHRH1ps4T7Vsbm3mFp3hmpb4FjPIhUmxgv_5sKHY-3Zsdoe-yU8Y4RtxSRAwUgUAUGwWk3o5JgKAVCwdI-bHI4Z3jrPnm5pv30-19Y5xRngAd0SAH98mC2lAoIeUM0NZm8gb79R_fgz5rn5DBYHok83x-oxiVH-lm0zBt-fJ269FKYtL5g"/>
+</div>
+<div class="gallery-overlay">
+<div class="font-label-caps text-label-caps tracking-widest mb-2 opacity-80 text-champagne-gold">CUSTOM GUTTERS</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-surface-container-lowest">Heritage Copper Installation</h3>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="gallery-card reveal-item">
+<div class="gallery-image-wrapper">
+<img class="gallery-image" data-alt="A sprawling commercial building exterior with a newly installed, immaculate slate tile roof. The sky behind is a clear, bright pale blue. The building's lines are sharp and rigid, conveying authority and structural integrity. High-resolution, sharp focus architectural photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYK7wIvK_xdvCnm7bxGtyHofRwvZ-9KER1UD1LR6w8NNjvFRtk1Kmb2ERK3shDFjk-_mLRpx1E8kczy3avZdZgmLDcqhysPn5Cr7u61keWdH8h4mo5OQpSB6Z0T3TY9FRUfKFsuoecKpP4yyKiyMlKXOSgZoXCT60woetnAJJZ-ODJ2GIrDSWf-LD8pgGeiYNc3Mqq3qaIM3pZJZ6CdfKxEMa-HZY-c8BYBZIuGFpRuh_KZYUJ4Z3R_g"/>
+</div>
+<div class="gallery-overlay">
+<div class="font-label-caps text-label-caps tracking-widest mb-2 opacity-80 text-champagne-gold">COMMERCIAL EXTERIOR</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-surface-container-lowest">Apex Corporate Center</h3>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="gallery-card reveal-item">
+<div class="gallery-image-wrapper" style="padding-bottom: 100%;">
+<img class="gallery-image" data-alt="Before and after style split view showing the side of a luxury minimalist home. One side is weathered, the other shows pristine, power-washed concrete and flawless new architectural siding in deep slate gray. Clean lines, bright daylight, high contrast and precise detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIZaRvmrYz5WHcrVfFO1dbJHT8igOovYoJLb2nkTLMTAeTIXQAh_CoVns-xjzzcM_55Xuap2UsbfDhp4HE8ai0sNrK8eO1Pz_Wwb5B4QToP5x7YSBWGamddBiGWpwCLnVMgHjwEJYCwggs15lgVJxcp7I38nXXgIdjviVGKUT1uAwBCe996kV3XFbMCK9Q8n08V6uEnVqJ8tTYbGx_rlFkw-sZ42oPAPRD_FPaSs2lLRLOosNfF4n5Zw"/>
+</div>
+<div class="gallery-overlay">
+<div class="font-label-caps text-label-caps tracking-widest mb-2 opacity-80 text-champagne-gold">RESTORATION &amp; WASHING</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-surface-container-lowest">Minimalist Facade Renewal</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-24 px-margin-mobile md:px-margin-desktop text-center reveal-item px-6 border-t border-white/5 pt-16">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-champagne-gold mb-8">
+                Elevate Your Property's Presence
+            </h2>
+<button class="font-button text-button bg-champagne-gold text-obsidian px-8 py-4 rounded-none hover:bg-champagne-gold/90 transition-colors inline-flex items-center gap-2 uppercase tracking-wider">
+                Consult With Our Experts
+                <span class="material-symbols-outlined" style="font-size: 20px;">arrow_forward</span>
+</button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-obsidian border-t border-white/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto px-6">
+<div class="col-span-1 md:col-span-2">
+<div class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-surface-container-lowest mb-4">
+                    Professional Exteriors
+                </div>
+<p class="font-body-md text-body-md text-surface-variant/60 max-w-sm mb-8">
+                    Architectural Integrity &amp; Precision. We build and restore exteriors that demand attention and withstand the elements.
+                </p>
+<div class="font-body-md text-body-md text-surface-variant/40">
+                    © 2024 Professional Exteriors.
+                </div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-surface-container-lowest mb-6 tracking-widest">LEGAL</h4>
+<ul class="space-y-4">
+<li class=""><a class="font-body-md text-body-md text-surface-variant/60 hover:text-champagne-gold transition-colors duration-200" href="#">Privacy Policy</a></li>
+<li class=""><a class="font-body-md text-body-md text-surface-variant/60 hover:text-champagne-gold transition-colors duration-200" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-surface-container-lowest mb-6 tracking-widest">COMPANY</h4>
+<ul class="space-y-4">
+<li class=""><a class="font-body-md text-body-md text-surface-variant/60 hover:text-champagne-gold transition-colors duration-200" href="#">Warranty Details</a></li>
+<li class=""><a class="font-body-md text-body-md text-surface-variant/60 hover:text-champagne-gold transition-colors duration-200" href="#">Service Areas</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<!-- Reveal Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-item').forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+</body></html>

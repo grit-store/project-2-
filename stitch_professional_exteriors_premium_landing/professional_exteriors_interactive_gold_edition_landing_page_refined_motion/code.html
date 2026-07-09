@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Professional Exteriors - Atlanta Luxury Living</title>
+<!-- Google Fonts: Syne & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Three.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Animation Classes */
+        .reveal-hidden { opacity: 0; }
+        .reveal-visible { opacity: 1; }
+        
+        .fade-up { transform: translateY(30px); transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
+        .fade-up.reveal-visible { transform: translateY(0); }
+        
+        .slide-left { transform: translateX(-40px); transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
+        .slide-left.reveal-visible { transform: translateX(0); }
+        
+        .slide-right { transform: translateX(40px); transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
+        .slide-right.reveal-visible { transform: translateX(0); }
+
+        .scale-up { transform: scale(0.95); transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
+        .scale-up.reveal-visible { transform: scale(1); }
+        
+        .delay-100 { transition-delay: 200ms; }
+        .delay-200 { transition-delay: 400ms; }
+        .delay-300 { transition-delay: 600ms; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+<!-- Tailwind CSS Setup -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#2b2a29",
+                    "sky-tint": "#B0E0E9",
+                    "inverse-primary": "#625f23",
+                    "surface-tint": "#cec67f",
+                    "off-white": "#F8FAFC",
+                    "outline": "#939084",
+                    "teal-accent": "#226D7A",
+                    "on-tertiary-container": "#ffe089",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#d2c586",
+                    "on-secondary-container": "#e1e3cf",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-container-highest": "#363433",
+                    "on-surface": "#e6e2e0",
+                    "on-primary-fixed-variant": "#4a480e",
+                    "primary-fixed-dim": "#cec67f",
+                    "tertiary-container": "#524b12",
+                    "surface-variant": "#49473f",
+                    "inverse-surface": "#e6e2e0",
+                    "on-primary-fixed": "#1d1c00",
+                    "surface": "#131313",
+                    "on-error": "#690005",
+                    "surface-container-low": "#1c1b1b",
+                    "on-primary": "#333200",
+                    "error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#4a480e",
+                    "on-secondary-fixed": "#1c1d10",
+                    "tertiary-fixed": "#efe1a0",
+                    "on-secondary": "#323324",
+                    "inverse-on-surface": "#32302f",
+                    "error": "#ffb4ab",
+                    "tertiary": "#d2c586",
+                    "surface-dim": "#131313",
+                    "outline-variant": "#49473f",
+                    "on-surface-variant": "#cac7b7",
+                    "on-tertiary": "#333100",
+                    "secondary": "#c6c7b4",
+                    "slate-gray": "#1E293B",
+                    "primary-container": "#4a480e",
+                    "surface-container": "#21201f",
+                    "primary": "#d4af37",
+                    "surface-bright": "#393939",
+                    "secondary-container": "#484a39",
+                    "on-secondary-fixed-variant": "#484a39",
+                    "on-tertiary-fixed": "#1e1d00",
+                    "on-background": "#e6e2e0",
+                    "on-primary-container": "#eae298",
+                    "primary-fixed": "#eae298",
+                    "secondary-fixed": "#e2e4d0",
+                    "secondary-fixed-dim": "#c6c7b4",
+                    "background": "#131313"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "section-gap": "120px",
+                    "margin-desktop": "64px",
+                    "stack-lg": "32px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "stack-md": "16px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "display-lg-mobile": [
+                            "Syne"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "button": [
+                            "Inter"
+                    ],
+                    "headline-lg-mobile": [
+                            "Syne"
+                    ],
+                    "headline-lg": [
+                            "Syne"
+                    ],
+                    "display-lg": [
+                            "Syne"
+                    ],
+                    "headline-md": [
+                            "Syne"
+                    ],
+                    "label-caps": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "48px",
+                            {
+                                    "lineHeight": "52px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "button": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-lg": [
+                            "80px",
+                            {
+                                    "lineHeight": "88px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-background/80 dark:bg-surface-container-lowest/80 backdrop-blur-md border-b border-outline-variant/10 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<!-- Brand Logo -->
+<div class="font-headline-md text-headline-md font-bold text-on-background tracking-tighter cursor-pointer">
+                Professional Exteriors
+            </div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-stack-lg">
+<a class="font-button text-button text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Roofing</a>
+<a class="font-button text-button text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Gutters</a>
+<a class="font-button text-button text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Washing</a>
+<a class="font-button text-button text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Storm Damage</a>
+<a class="font-button text-button text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Gallery</a>
+<a class="font-button text-button text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Contact</a>
+</nav>
+<!-- Trailing Action -->
+<a class="hidden md:inline-flex items-center justify-center bg-primary text-on-primary font-button text-button px-6 py-3 rounded hover:bg-primary-container transition-all duration-300 shadow-sm" href="#lead-gen">
+                Get a Quote
+            </a>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-background">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- 1. Hero Section -->
+<section class="relative pt-[120px] pb-section-gap min-h-[90vh] flex items-center overflow-hidden bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida/AP1WRLvUDEsAVzWvTfXxqLP6U1-KRk23h-hxuEsvk7_XVj1pD7Zqm_eUaxsBC8JxNurXMjC9NXVsomWt8JkjBr5EDgR_4O6XTVwTCkPRN6SUME9_ZwR9H7DCr8jwRwhEYe28QhOpB-mbg4I16TCFJBriVjRgGH-mAZA6NY-z1pUEN2d3pOrFvTPssQDYRWgkMWjFmi9QSzTCckqmIq5xvuLn_RnHCMxg31IJYBE1iCa7xV0HkUqa-IqbKoZ5rUk"); background-size: cover; background-position: center center;'>
+<!-- Background 3D Scene -->
+<!-- Architectural Dark Overlay -->
+<div class="absolute inset-0 bg-surface/60 z-0"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/20 to-transparent z-0"></div>
+<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-end scroll-reveal fade-up reveal-hidden reveal-visible">
+<div class="max-w-3xl">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-4 block">Architectural Integrity &amp; Precision</span>
+<h1 class="font-display-lg text-display-lg font-extrabold text-on-background mb-6 leading-tight">
+                        Atlanta's Premium<br/>Exterior &amp; Roofing<br/>Experts
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-10">
+                        Decades of combined experience protecting what matters most. We deliver uncompromising quality and structural excellence for discerning homeowners and commercial properties.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="inline-flex items-center justify-center bg-primary text-on-primary font-button text-button px-8 py-4 rounded hover:bg-primary-container transition-colors duration-300" href="#lead-gen">
+                            Get Your Free Estimate
+                        </a>
+<a class="inline-flex items-center justify-center border border-outline-variant text-on-background hover:bg-surface-container font-button text-button px-8 py-4 rounded transition-colors duration-300" href="#services">
+                            Explore Our Work
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Trust Bar -->
+<section class="bg-surface-container border-b border-outline/10 py-8 relative z-20 -mt-16 mx-margin-desktop md:mx-auto max-w-5xl rounded shadow-sm scroll-reveal fade-up delay-100 reveal-hidden reveal-visible">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 gap-6 opacity-80 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary" data-icon="star" data-weight="fill">star</span>
+<span class="font-label-caps text-label-caps ml-2 text-on-surface">5-Star Yelp Rating</span>
+</div>
+<div class="h-8 w-px bg-outline/20 hidden md:block"></div>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">Locally Owned &amp; Operated in Metro Atlanta</span>
+<div class="h-8 w-px bg-outline/20 hidden md:block"></div>
+<div class="flex gap-8 items-center">
+<span class="font-headline-md text-headline-md font-bold text-on-surface opacity-60">GAF</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface opacity-60">OWENS CORNING</span>
+</div>
+</div>
+</section>
+<!-- 3. Services Bento Box -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-desktop relative" id="services">
+<!-- Subtle Architectural Line Art Decor -->
+<div class="absolute top-0 right-0 w-64 h-64 border-t-2 border-r-2 border-primary/20 pointer-events-none transform -translate-y-12 translate-x-12 hidden md:block"></div>
+<div class="absolute bottom-0 left-0 w-48 h-48 border-b-2 border-l-2 border-primary/20 pointer-events-none transform translate-y-12 -translate-x-12 hidden md:block"></div>
+<div class="absolute top-20 right-10 w-32 h-32 border border-primary/10 pointer-events-none transform rotate-45 hidden md:block animate-float"></div>
+<div class="absolute top-1/2 left-0 w-64 h-64 pointer-events-none hidden lg:block opacity-20 animate-float delay-200 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLtW80u82QJKeap12AVy0DrmcCMPvjBLHIv_OZHy5ua03dacwhGv2LF7Jp-Pvk_nGBDPR1dP0VQEzZRZ3nNxwlFkovIxhntT43LBCBB09v4vASb31e2Yuc-zp__xyMX-wZYt3Qsc5t6Sb-OURRJktr8JfCkHx2SS4xFayvpkOb92i_iioBvr7-FXJX1Lfm9dllV9fPZKv0bZqbP__W2yc_KJcRpC7DvmzwrG36nd56zBNR-i20ofyvtxw9K3');"></div>
+<div class="mb-stack-lg relative z-10 scroll-reveal fade-up reveal-hidden reveal-visible">
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-background mb-4">Our Services</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Specialized exterior restoration and architectural enhancement.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-gutter h-auto md:h-[600px] relative z-10">
+<!-- Large Card: Roofing -->
+<a class="col-span-1 md:col-span-2 row-span-1 md:row-span-2 group relative border border-outline/20 rounded overflow-hidden flex flex-col justify-end bg-surface-container h-[400px] md:h-auto scroll-reveal slide-left delay-100 reveal-hidden reveal-visible" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A high-resolution, wide-angle shot of a newly installed luxury architectural shingle roof on a modern mansion in Atlanta. The lighting is golden hour, highlighting the texture and precision of the dark slate-colored shingles against a clear sky. The overall tone is authoritative, pristine, and structurally sound, fitting a premium construction aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAvyGMi1Z_PlgY58jJVw9avsI8b3rM4laVJY7MD5j4IbVfRCgmYU4iHYrQEg4cut8_xujN7IXREJjFRc3bm6X0R-Hf9pqlJA1419zxtsYtN9KY9so4tYC1IUW7QGYVbbwIeXXK24RKwEoWCdtmyb7AE4l6J8k-yB74UIJ_KfSialfRHoNi4fBqbRdVeR-yJS6UX8goQ8z8J1hlXN3AAj3fr41hAdqia2Wa128UGio1A3wEmGPnpBkaxtg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/50 to-transparent opacity-90 group-hover:opacity-80 transition-opacity"></div>
+<div class="relative z-10 p-8">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl drop-shadow-md" data-icon="roofing">roofing</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-background mb-2">Roof Replacement</h3>
+<p class="font-body-md text-body-md text-on-surface-variant hidden md:block">Comprehensive structural assessment and premium material installation for lasting protection.</p>
+</div>
+</a>
+<!-- Small Card 1: Gutters -->
+<a class="col-span-1 row-span-1 group relative border border-outline/20 rounded overflow-hidden flex flex-col justify-end bg-surface-container h-[288px] scroll-reveal slide-right delay-200 reveal-hidden reveal-visible" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A close-up, architectural detail shot of sleek, modern seamless copper gutters installed on a sharp roofline of a high-end home. The metal gleams subtly in overcast, soft lighting, emphasizing clean geometric lines and precise craftsmanship. The background is a slightly blurred, crisp white exterior wall." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCx98i6Hld_FZGeAevT9BIjPB7OAb780manKVllO74TwCpyThXx9FCClMd_akEXpIcBlOhEGjFdRzZemRvrv9r_sFmq9OsHKOWiu_gjdDgASyFamfsXhrUquF5HBRovdBxeyotZl7JzjIs57EDLe1g8eHeCmr1qFFBAsJP_7YE_AtQa5TRBo4hQuX0VDOdyxX30cevAH5-a-jTMtPxjw6emc626nqxhbd_qasMQAApQPYvgDXwInuLwIA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-90 group-hover:opacity-80 transition-opacity"></div>
+<div class="relative z-10 p-6">
+<span class="material-symbols-outlined text-primary mb-2 drop-shadow-md" data-icon="water_drop">water_drop</span>
+<h3 class="font-body-lg text-body-lg font-bold text-on-background">Seamless Gutters</h3>
+</div>
+</a>
+<!-- Small Card 2: Washing -->
+<a class="col-span-1 row-span-1 group relative border border-outline/20 rounded overflow-hidden flex flex-col justify-end bg-surface-container h-[288px] scroll-reveal slide-right delay-300 reveal-hidden reveal-visible" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A stark, high-contrast image showing a pristine, freshly pressure-washed stone retaining wall alongside a luxury driveway. The light mode aesthetic is prominent with bright, clean surfaces contrasting against deep shadows. Water droplets are visible on the clean stone, conveying restoration and meticulous care." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCHy9X0a4bLSywGp4qctCnG19NGSr07BThJcw2ckXjlBCq0v_Em7rqWTX8K4ipIVHM5VeESn5rvH4TOLQgMKfxdjICK_j84kRviFwvwS4YCwYdmT5ZUgeyTgBu_h8Dj3q_FLixzhBeJyhFILrxAO8RoA_Dg-Aku1o9cUb3OBEQVWWxxcwYtA_eBFDVl4veqnWz6djVLJIsBo5N82eyCk32J7v0m4PVU6pkLjNK4p_Ct_SFngKMozcV3qQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-90 group-hover:opacity-80 transition-opacity"></div>
+<div class="relative z-10 p-6">
+<span class="material-symbols-outlined text-primary mb-2 drop-shadow-md" data-icon="cleaning_services">cleaning_services</span>
+<h3 class="font-body-lg text-body-lg font-bold text-on-background">Pressure Washing</h3>
+</div>
+</a>
+</div>
+</section>
+<!-- 4. "Why Us" Section -->
+<section class="py-section-gap bg-surface-container-lowest border-t border-outline/10 relative overflow-hidden">
+<!-- Subtle Architectural Line Art Decor -->
+<div class="absolute left-0 top-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/10 to-transparent pointer-events-none transform -translate-y-1/2"></div>
+<div class="absolute right-0 bottom-0 w-96 h-96 border-t border-l border-primary/15 pointer-events-none opacity-50 hidden md:block" style="border-radius: 100% 0 0 0;"></div>
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-section-gap items-center relative z-10">
+<div class="relative border border-outline/20 p-2 bg-surface-container rounded shadow-sm scroll-reveal slide-left reveal-hidden reveal-visible">
+<img alt="Professional Crew" class="w-full h-auto rounded grayscale-[30%] contrast-125" data-alt="A professional, high-definition portrait of a focused roofing crew standing confidently in front of a luxury home project in Atlanta. They are wearing clean, branded uniforms in charcoal and dark blue. The lighting is crisp and natural, emphasizing their expertise, reliability, and the premium nature of their service. The composition is structured and architectural." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpJNPYMXCEJObpV-CaavwaR5PnNTMgkjI-UA20Uz2WtrOAfpHSIuOYYtKrvPiLsedM6KrHqLeydNYsaO05pb0uZ5K72aVXxCNgXzv_7n9_A6DgV0qPTksy0ArxtwSl9LvPLr2fBU6coqD6PjZPTgafIMtQxP5IOCsEKq8fq48Gd7cCabBCxAy57eeDQFqDYKJVwp4zx7knHj-fNZLJx0sRBzNOMOGcH2gZEyP9Q9Zx0Z_DzDayc3e86Q"/>
+<!-- Ghost structural element with metallic copper accent -->
+<div class="absolute -bottom-6 -right-6 w-full h-full border border-primary/40 z-[-1] rounded"></div>
+<div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-primary/30 z-[-1]"></div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-background mb-8 relative inline-block scroll-reveal fade-up reveal-hidden reveal-visible">
+    The Professional Difference
+    <span class="absolute -bottom-2 left-0 w-1/3 h-1 bg-primary/50"></span>
+</h2>
+<ul class="space-y-stack-lg relative z-10">
+<li class="flex gap-4 items-start scroll-reveal slide-right delay-100 reveal-hidden reveal-visible">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="location_on">location_on</span>
+<div>
+<h4 class="font-body-lg text-body-lg font-bold text-on-background">Born &amp; Raised in Atlanta</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">We understand local weather patterns and architectural styles implicitly.</p>
+</div>
+</li>
+<li class="flex gap-4 items-start scroll-reveal slide-right delay-200 reveal-hidden reveal-visible">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="military_tech">military_tech</span>
+<div>
+<h4 class="font-body-lg text-body-lg font-bold text-on-background">Over a Decade of Experience</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Refined craftsmanship backed by years of rigorous industry application.</p>
+</div>
+</li>
+<li class="flex gap-4 items-start scroll-reveal slide-right delay-300 reveal-hidden reveal-visible">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="architecture">architecture</span>
+<div>
+<h4 class="font-body-lg text-body-lg font-bold text-on-background">Complete Service Life Restoration</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">We don't just patch; we restore structural integrity to its optimal state.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- 5. Testimonial Slider (Dark Mode styling) -->
+<section class="py-section-gap bg-surface-container-high text-on-background relative overflow-hidden">
+<!-- Subtle architectural background lines -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 64px 64px;"></div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="flex flex-col md:flex-row gap-gutter">
+<!-- Testimonial 1 -->
+<div class="flex-1 border border-white/10 p-12 relative bg-white/5 backdrop-blur-sm scroll-reveal scale-up delay-100 reveal-hidden reveal-visible">
+<span class="material-symbols-outlined text-primary opacity-50 absolute top-8 left-8 text-6xl" data-icon="format_quote">format_quote</span>
+<p class="font-body-lg text-body-lg relative z-10 mt-8 mb-6 leading-relaxed">"The level of precision and professionalism was unmatched. They handled our storm damage with absolute surgical care. The new roof looks like a piece of modern art."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center font-label-caps text-primary border border-primary/30">BW</div>
+<span class="font-button text-button uppercase tracking-widest text-on-surface-variant">Bobby W.</span>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="flex-1 border border-white/10 p-12 relative bg-white/5 backdrop-blur-sm scroll-reveal scale-up delay-200 reveal-hidden reveal-visible">
+<span class="material-symbols-outlined text-primary opacity-50 absolute top-8 left-8 text-6xl" data-icon="format_quote">format_quote</span>
+<p class="font-body-lg text-body-lg relative z-10 mt-8 mb-6 leading-relaxed">"Their crew operates like a well-oiled machine. They transformed our exterior facade completely. The seamless gutters blend perfectly with the architectural lines of the house."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center font-label-caps text-primary border border-primary/30">OS</div>
+<span class="font-button text-button uppercase tracking-widest text-on-surface-variant">Orlando S.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Lead-Gen Footer -->
+<section class="py-section-gap bg-background border-t border-outline/20" id="lead-gen">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center max-w-4xl scroll-reveal fade-up reveal-hidden reveal-visible">
+<h2 class="font-display-lg text-display-lg font-extrabold text-on-background mb-6">Don't Wait for the Next Storm.<br/>Protect Your Home Today.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Secure your priority assessment and expert consultation.</p>
+<form class="flex flex-col md:flex-row gap-6 justify-center items-end text-left">
+<div class="w-full md:w-1/3">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:border-b-2 focus:ring-0 px-0 py-2 font-body-md text-on-background transition-all duration-300 placeholder-outline/50 outline-none" placeholder="John Doe" type="text"/>
+</div>
+<div class="w-full md:w-1/3">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">Phone Number</label>
+<input class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:border-b-2 focus:ring-0 px-0 py-2 font-body-md text-on-background transition-all duration-300 placeholder-outline/50 outline-none" placeholder="(555) 000-0000" type="tel"/>
+</div>
+<div class="w-full md:w-1/3">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">Service Needed</label>
+<select class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:border-b-2 focus:ring-0 px-0 py-2 font-body-md text-on-background transition-all duration-300 appearance-none outline-none">
+<option>Roof Replacement</option>
+<option>Gutters</option>
+<option>Pressure Washing</option>
+<option>Storm Damage Inspection</option>
+</select>
+</div>
+<button class="w-full md:w-auto bg-primary text-on-primary font-button text-button px-8 py-3 h-[42px] rounded hover:bg-primary-container transition-colors duration-300" type="submit">
+                        Submit Request
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-section-gap border-t border-outline/20 bg-surface-container-lowest">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="font-headline-lg text-headline-lg font-extrabold text-on-background mb-4">
+                    Professional Exteriors
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                    Architectural Integrity &amp; Precision. We build to last, protecting your investments against the elements.
+                </p>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-on-surface-variant mb-4">Legal &amp; Support</h4>
+<ul class="space-y-2">
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Privacy Policy</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Terms of Service</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Warranty Details</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-on-surface-variant mb-4">Company</h4>
+<ul class="space-y-2">
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Service Areas</a></li>
+</ul>
+</div>
+</div>
+<div class="px-margin-desktop max-w-container-max mx-auto mt-16 pt-8 border-t border-outline/20 flex justify-between items-center">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                © 2024 Professional Exteriors. Architectural Integrity &amp; Precision.
+            </p>
+</div>
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(element => {
+            element.classList.add('reveal-hidden');
+            observer.observe(element);
+        });
+
+        // Three.js Hero Animation
+        const container = document.getElementById('hero-canvas-container');
+        if (container) {
+            const width = container.clientWidth || window.innerWidth;
+            const height = container.clientHeight || window.innerHeight;
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            renderer.setSize(width, height);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            container.appendChild(renderer.domElement);
+
+            // Luxury Architectural Form: Abstract Roofing/Structure intersection
+            const group = new THREE.Group();
+            scene.add(group);
+
+            const material = new THREE.MeshPhongMaterial({ 
+                color: 0xD4AF37, // Champagne Gold
+                shininess: 100,
+                specular: 0xffffff,
+                side: THREE.DoubleSide,
+                flatShading: true
+            });
+
+            // Roof plane 1
+            const roof1 = new THREE.Mesh(new THREE.PlaneGeometry(5, 5, 2, 2), material);
+            roof1.rotation.x = -Math.PI / 4;
+            roof1.position.x = -1.5;
+            group.add(roof1);
+
+            // Roof plane 2
+            const roof2 = new THREE.Mesh(new THREE.PlaneGeometry(5, 5, 2, 2), material);
+            roof2.rotation.x = -Math.PI / 4;
+            roof2.rotation.y = Math.PI / 2;
+            roof2.position.x = 1.5;
+            group.add(roof2);
+
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+            scene.add(ambientLight);
+
+            const pointLight = new THREE.PointLight(0xD4AF37, 2);
+            pointLight.position.set(5, 5, 5);
+            scene.add(pointLight);
+
+            camera.position.z = 8;
+
+            function animate() {
+                requestAnimationFrame(animate);
+                group.rotation.y += 0.005;
+                group.rotation.x += 0.002;
+                renderer.render(scene, camera);
+            }
+            animate();
+
+            window.addEventListener('resize', () => {
+                const w = container.clientWidth || window.innerWidth;
+                const h = container.clientHeight || window.innerHeight;
+                camera.aspect = w / h;
+                camera.updateProjectionMatrix();
+                renderer.setSize(w, h);
+            });
+        }
+    });
+</script>
+</body></html>

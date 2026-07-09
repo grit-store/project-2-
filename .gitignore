@@ -1,0 +1,7 @@
+# Ignore zip files
+*.zip
+
+# Ignore local temporary/log files
+.agents/
+.gemini/
+*.log

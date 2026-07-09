@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Professional Exteriors - Gold Edition Roofing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&amp;family=Inter:wght@400..700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "teal-accent": "#226D7A",
+                      "on-primary": "#ffffff",
+                      "secondary-container": "#fdad67",
+                      "off-white": "#F8FAFC",
+                      "outline-variant": "#c2c6d8",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed": "#001849",
+                      "on-tertiary-container": "#fff6f4",
+                      "inverse-on-surface": "#f3f0ef",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface": "#1c1b1b",
+                      "surface-bright": "#fcf9f8",
+                      "primary": "#0050cb",
+                      "surface-variant": "#e5e2e1",
+                      "error-container": "#ffdad6",
+                      "surface-container-high": "#ebe7e7",
+                      "on-error-container": "#93000a",
+                      "tertiary-fixed-dim": "#ffb59d",
+                      "tertiary-fixed": "#ffdbd0",
+                      "surface-container": "#f0edec",
+                      "on-error": "#ffffff",
+                      "secondary-fixed": "#ffdcc2",
+                      "on-primary-fixed-variant": "#003fa4",
+                      "on-secondary-fixed": "#2e1500",
+                      "on-background": "#1c1b1b",
+                      "surface-container-low": "#f6f3f2",
+                      "sky-tint": "#B0E0E9",
+                      "primary-container": "#0066ff",
+                      "on-primary-container": "#f8f7ff",
+                      "on-secondary-container": "#763f00",
+                      "background": "#fcf9f8",
+                      "secondary": "#8c4f10",
+                      "surface-dim": "#dcd9d9",
+                      "inverse-primary": "#b3c5ff",
+                      "primary-fixed": "#dae1ff",
+                      "slate-gray": "#1E293B",
+                      "outline": "#727687",
+                      "on-secondary-fixed-variant": "#6d3a00",
+                      "tertiary-container": "#cc4204",
+                      "primary-fixed-dim": "#b3c5ff",
+                      "on-tertiary-fixed": "#390c00",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#424656",
+                      "error": "#ba1a1a",
+                      "surface-container-highest": "#e5e2e1",
+                      "surface": "#fcf9f8",
+                      "on-tertiary-fixed-variant": "#832600",
+                      "inverse-surface": "#313030",
+                      "surface-tint": "#0054d6",
+                      "tertiary": "#a33200",
+                      "secondary-fixed-dim": "#ffb77b",
+                      "gold-primary": "#D4AF37",
+                      "gold-muted": "#AA8C2C",
+                      "obsidian": "#131313",
+                      "champagne-gold": "#D4AF37"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-lg": "32px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px",
+                      "stack-sm": "8px",
+                      "container-max": "1280px",
+                      "gutter": "24px",
+                      "stack-md": "16px",
+                      "section-gap": "120px",
+                      "section-gap-mobile": "80px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Syne", "sans-serif"],
+                      "headline-lg": ["Syne", "sans-serif"],
+                      "display-lg-mobile": ["Syne", "sans-serif"],
+                      "label-caps": ["Inter", "sans-serif"],
+                      "display-lg": ["Syne", "sans-serif"],
+                      "headline-lg-mobile": ["Syne", "sans-serif"],
+                      "body-lg": ["Inter", "sans-serif"],
+                      "button": ["Inter", "sans-serif"],
+                      "body-md": ["Inter", "sans-serif"]
+              },
+              "fontSize": {
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                      "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                      "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "display-lg": ["80px", {"lineHeight": "88px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "button": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-element.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Mobile specific adjustments */
+        @media (max-width: 768px) {
+            .mobile-padding { padding-left: 20px; padding-right: 20px; }
+            .mobile-stack { flex-direction: column; }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-champagne-gold selection:text-obsidian bg-obsidian text-surface-container-lowest">
+<!-- Mobile Top Header (Simplified for Mobile Destination) -->
+<header class="fixed top-0 w-full z-50 bg-obsidian/90 backdrop-blur-md border-b border-white/10 shadow-sm transition-all duration-300" id="mobile-header">
+<div class="flex justify-between items-center px-margin-mobile py-4 max-w-container-max mx-auto">
+<a aria-label="Home" class="font-headline-md text-headline-md font-bold text-champagne-gold tracking-tighter" href="#">
+                Professional Exteriors
+            </a>
+<button aria-label="Menu" class="md:hidden text-surface-container-lowest">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<!-- Hidden Desktop Nav -->
+<nav class="hidden md:flex space-x-6 items-center">
+<a class="text-champagne-gold border-b-2 border-champagne-gold pb-1 font-button text-button" href="#">Roofing</a>
+<a class="text-surface-container-lowest/70 hover:text-champagne-gold transition-colors font-button text-button" href="#">Gutters</a>
+<a class="text-surface-container-lowest/70 hover:text-champagne-gold transition-colors font-button text-button" href="#">Washing</a>
+<a class="text-surface-container-lowest/70 hover:text-champagne-gold transition-colors font-button text-button" href="#">Storm Damage</a>
+<a class="text-surface-container-lowest/70 hover:text-champagne-gold transition-colors font-button text-button" href="#">Gallery</a>
+<a class="text-surface-container-lowest/70 hover:text-champagne-gold transition-colors font-button text-button" href="#">Contact</a>
+<a class="bg-champagne-gold text-obsidian px-6 py-2 font-button text-button transition-opacity hover:opacity-90" href="#">Get a Quote</a>
+</nav>
+</div>
+</header>
+<main class="pt-[80px]">
+<!-- Hero Section -->
+<section class="relative min-h-[751px] flex items-center justify-center mobile-padding py-section-gap-mobile overflow-hidden bg-obsidian">
+<div class="absolute inset-0 w-full h-full">
+<div class="bg-contain bg-top bg-no-repeat w-full h-full opacity-60 mix-blend-overlay" data-alt="A striking, high-contrast, low-angle photograph of a pristine, modern luxury home's slate roof against a clear, deep twilight sky. The image is crisp, with lighting highlighting the sharp angles and meticulous craftsmanship of the roofing tiles. The overall mood is authoritative, permanent, and institutional, fitting a premium architectural aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDs7EFwvQW7CuDv56H1NPvPZ6bUHLmxik-BgFoYj1QrcqBRoH8w_ERD5uF_xL4LlqDaZWgJ8-Gk1e8ZUgK1FzSpfeoiQYR0-CJnRsxijrlGmvKXdQbS_K1KTwjw-BNM72cCiRn9Jd0X43KbFVQRC3FYZwkZLOr8XxJk9ZcgMWeOlzcEx2Lb-e35blxb8L2dsaHTa7V_396_h8OR2EbOBMPWP6ml08Oyi81TQcmTLCgqXkxxs_I-Q_ZdRw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/80 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto text-center flex flex-col items-center">
+<span class="font-label-caps text-label-caps text-champagne-gold mb-stack-md tracking-widest uppercase reveal-element border border-champagne-gold/50 px-4 py-1 is-visible">The Gold Edition</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-white mb-stack-lg reveal-element is-visible px-4" style="line-height: 1.1;">
+                    Uncompromising<br/>Structural<br/>Excellence.
+                </h1>
+<p class="font-body-lg text-body-lg text-white/80 max-w-[90%] mx-auto mb-stack-lg reveal-element is-visible px-4">
+                    Precision-engineered roofing systems for discerning homeowners. Where architectural integrity meets luxury aesthetics.
+                </p>
+<div class="reveal-element is-visible">
+<a class="inline-flex items-center justify-center px-8 py-4 bg-champagne-gold text-obsidian font-button text-button transition-transform active:scale-95 shadow-[0_10px_30px_rgba(212,175,55,0.2)] hover:bg-champagne-gold/90 uppercase tracking-wider" href="#consultation">
+                        Request Private Consultation
+                    </a>
+</div>
+</div>
+</section>
+<!-- The Promise Section (Bento Grid Style) -->
+<section class="py-section-gap-mobile mobile-padding bg-obsidian relative" id="promise">
+<div class="max-w-container-max mx-auto">
+<div class="mb-stack-lg reveal-element">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-white mb-stack-sm px-4">The Standard.</h2>
+<div class="w-12 h-1 bg-champagne-gold"></div>
+</div>
+<div class="grid grid-cols-1 gap-stack-md">
+<!-- Bento Item 1 -->
+<div class="bg-white/5 backdrop-blur-md border border-white/10 p-6 reveal-element relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-[60px] text-white" style="font-variation-settings: 'FILL' 1;">architecture</span>
+</div>
+<h3 class="font-headline-md text-[24px] leading-[32px] font-bold text-white mb-stack-sm">Architectural Integration</h3>
+<p class="font-body-md text-body-md text-white/70">We don't just replace roofs; we ensure every line, material, and pitch perfectly complements your home's original architectural vision.</p>
+</div>
+<!-- Bento Item 2 (Image Focus) -->
+<div class="h-[250px] relative reveal-element border border-white/10 overflow-hidden">
+<div class="bg-cover bg-center w-full h-full transition-transform duration-1000 group-hover:scale-105" data-alt="Close-up detail shot of high-end, textured architectural roofing shingles. The lighting is crisp and cool, casting subtle shadows that highlight the depth and premium quality of the material. The aesthetic is clean, minimalist, and focuses on structural integrity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB31YaoNQX5k2DAAaRyu8e8hJ1Ju3sh-mVZ8hjlgrI_Ji2PD93TVCfCry9aVd8O5uUQOMCWTk5OMxxjpJx10UU5xKHNatkbiRbV25rgx6YL1sHT6TmiZp7ui6K8XVkA_Pe24IK2bUWlWJyATd2q07opw6dFylBS0ERKaiGzR0Ad1v-02fk-VlwlmJLQcAe2Sf-ZxveUca060YgJggQG-dteV8igjqIOSQnMfS488gnLlNMREkSYRzN2nw')"></div>
+</div>
+<!-- Bento Item 3 -->
+<div class="bg-white/5 backdrop-blur-md border border-white/10 p-6 reveal-element">
+<h3 class="font-headline-md text-[24px] leading-[32px] font-bold text-champagne-gold mb-stack-sm">Lifetime Precision</h3>
+<p class="font-body-md text-body-md text-white/70">Every nail, every seam, executed with surgical precision. Backed by an uncompromising warranty designed for complete peace of mind.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Standard Footer -->
+<footer class="w-full py-section-gap-mobile bg-obsidian border-t border-white/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-margin-mobile max-w-container-max mx-auto px-6">
+<div class="flex flex-col gap-4">
+<span class="font-headline-lg text-headline-lg font-extrabold text-white">Professional Exteriors</span>
+<p class="font-body-md text-body-md text-white/70">Architectural Integrity &amp; Precision.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-label-caps text-label-caps text-champagne-gold font-bold mb-2">Legal</h4>
+<a class="font-body-md text-body-md text-white/60 hover:text-champagne-gold transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-white/60 hover:text-champagne-gold transition-colors duration-200" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-white/60 hover:text-champagne-gold transition-colors duration-200" href="#">Warranty Details</a>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-label-caps text-label-caps text-champagne-gold font-bold mb-2">Company</h4>
+<a class="font-body-md text-body-md text-white/60 hover:text-champagne-gold transition-colors duration-200" href="#">Service Areas</a>
+</div>
+<div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-white/10">
+<p class="font-body-md text-body-md text-white/40 text-center">© 2024 Professional Exteriors. Architectural Integrity &amp; Precision.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal logic tailored for mobile smoothness
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal-element');
+            
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 100; // Offset before reveal
+
+                reveals.forEach((reveal) => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('is-visible');
+                    }
+                });
+            };
+
+            // Initial check
+            revealOnScroll();
+
+            // Throttle scroll event slightly for mobile performance
+            let isScrolling;
+            window.addEventListener('scroll', () => {
+                window.clearTimeout(isScrolling);
+                isScrolling = setTimeout(() => {
+                    revealOnScroll();
+                }, 40); // roughly 25fps check
+            });
+            
+            // Subtle header hiding on downscroll, showing on upscroll for more screen space
+            let lastScrollTop = 0;
+            const header = document.getElementById('mobile-header');
+            
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    // Downscroll
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    // Upscroll
+                    header.style.transform = 'translateY(0)';
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            }, { passive: true });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Professional Exteriors - Seamless Gutters</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#2b2a29",
+                        "sky-tint": "#B0E0E9",
+                        "inverse-primary": "#625f23",
+                        "surface-tint": "#cec67f",
+                        "off-white": "#F8FAFC",
+                        "outline": "#939084",
+                        "teal-accent": "#226D7A",
+                        "on-tertiary-container": "#ffe089",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#d2c586",
+                        "on-secondary-container": "#e1e3cf",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-container-highest": "#363433",
+                        "on-surface": "#e6e2e0",
+                        "on-primary-fixed-variant": "#4a480e",
+                        "primary-fixed-dim": "#cec67f",
+                        "tertiary-container": "#524b12",
+                        "surface-variant": "#49473f",
+                        "inverse-surface": "#e6e2e0",
+                        "on-primary-fixed": "#1d1c00",
+                        "surface": "#131313",
+                        "on-error": "#690005",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary": "#333200",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#4a480e",
+                        "on-secondary-fixed": "#1c1d10",
+                        "tertiary-fixed": "#efe1a0",
+                        "on-secondary": "#323324",
+                        "inverse-on-surface": "#32302f",
+                        "error": "#ffb4ab",
+                        "tertiary": "#d2c586",
+                        "surface-dim": "#131313",
+                        "outline-variant": "#49473f",
+                        "on-surface-variant": "#cac7b7",
+                        "on-tertiary": "#333100",
+                        "secondary": "#c6c7b4",
+                        "slate-gray": "#1E293B",
+                        "primary-container": "#4a480e",
+                        "surface-container": "#21201f",
+                        "primary": "#d4af37",
+                        "surface-bright": "#393939",
+                        "secondary-container": "#484a39",
+                        "on-secondary-fixed-variant": "#484a39",
+                        "on-tertiary-fixed": "#1e1d00",
+                        "on-background": "#e6e2e0",
+                        "on-primary-container": "#eae298",
+                        "primary-fixed": "#eae298",
+                        "secondary-fixed": "#e2e4d0",
+                        "secondary-fixed-dim": "#c6c7b4",
+                        "background": "#131313"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "stack-md": "16px",
+                        "container-max": "1280px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Syne", "sans-serif"],
+                        "display-lg-mobile": ["Syne", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "button": ["Inter", "sans-serif"],
+                        "headline-lg": ["Syne", "sans-serif"],
+                        "label-caps": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "display-lg": ["Syne", "sans-serif"],
+                        "headline-lg-mobile": ["Syne", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "button": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["80px", { "lineHeight": "88px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .architectural-grid {
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Animation Classes */
+        .reveal-hidden { opacity: 0; }
+        .reveal-visible { opacity: 1; }
+        
+        .fade-up { transform: translateY(20px); transition: opacity 1.2s ease-out, transform 1.2s ease-out; }
+        .fade-up.reveal-visible { transform: translateY(0); }
+        
+        .slide-left { transform: translateX(-40px); transition: opacity 1.2s ease-out, transform 1.2s ease-out; }
+        .slide-left.reveal-visible { transform: translateX(0); }
+        
+        .slide-right { transform: translateX(40px); transition: opacity 1.2s ease-out, transform 1.2s ease-out; }
+        .slide-right.reveal-visible { transform: translateX(0); }
+
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+        .delay-500 { transition-delay: 500ms; }
+        .delay-600 { transition-delay: 600ms; }
+        .delay-700 { transition-delay: 700ms; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 dark:bg-on-background/80 backdrop-blur-md border-b border-outline-variant/10 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-background dark:text-background tracking-tighter">
+                Professional Exteriors
+            </div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-button text-button text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300" href="#">Roofing</a>
+<a class="font-button text-button text-primary dark:text-primary-fixed-dim border-b-2 border-primary pb-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300 opacity-80 transition-opacity" href="#">Gutters</a>
+<a class="font-button text-button text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300" href="#">Washing</a>
+<a class="font-button text-button text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300" href="#">Storm Damage</a>
+<a class="font-button text-button text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300" href="#">Gallery</a>
+<a class="font-button text-button text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:text-primary dark:hover:text-primary-fixed-dim transition-all duration-300" href="#">Contact</a>
+</div>
+<button class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-button text-button rounded hover:bg-primary-container transition-all duration-300 shadow-sm">
+                Get a Quote
+            </button>
+<button class="md:hidden text-on-background p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-24 md:pt-32 pb-section-gap">
+<!-- Hero Section -->
+<section class="relative px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center min-h-[614px]">
+<div class="md:col-span-7 z-10 scroll-reveal slide-right delay-100 reveal-hidden reveal-visible">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest mb-4 block">Architectural Integrity</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-6">Seamless Gutters.<br/>Engineered Perfection.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8">
+                        Precision-crafted water management systems designed to protect and enhance the structural integrity of high-end architectural properties. No seams, no compromises.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 bg-primary text-on-primary font-button text-button rounded hover:bg-primary-container transition-colors duration-300">
+                            Explore Systems
+                        </button>
+<button class="px-8 py-4 border border-outline-variant text-on-background hover:bg-surface-container font-button text-button rounded transition-colors duration-300">
+                            Request Consultation
+                        </button>
+</div>
+</div>
+<div class="md:col-span-5 relative h-[500px] w-full scroll-reveal slide-left delay-400 reveal-hidden reveal-visible">
+<div class="absolute inset-0 architectural-grid opacity-50 z-0"></div>
+<img alt="Seamless Gutter Installation" class="w-full h-full object-cover rounded relative z-10 border border-outline-variant/20 shadow-sm" data-alt="A close-up, high-resolution architectural photograph of a perfectly installed, dark metallic seamless gutter on a modern luxury home with a white facade. The lighting is crisp, high-contrast, highlighting the sharp lines and smooth finish of the gutter against the clean background. The aesthetic is modern minimalism, emphasizing structural integrity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHowHLJMaECj9WVpvvUMdPOeGJPYmyS-9EoryDKt1aec6z3dvd7CEjXZvstibnnPG5XsXZCqtR13-c8X1khuKDs_oyvOII2bPamGCLzpxvFqQJ0fLD51mQHMun5YE5ycq9HqhxRh5Y2ejGz8OPRbhCPzBzMS2AYPCjNsC9p4qPol1xiNp9mjJkocfdacw6kvtLEqunE4Hku5jLGGdWvFBkHPD0JTvnzA4_OR5eAdnD5ZGGB6VPlxcwEQ"/>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap">
+<div class="flex flex-col items-center text-center mb-16 scroll-reveal fade-up delay-100 reveal-hidden reveal-visible">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest mb-2">Portfolio</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">Gallery of Excellence</h2>
+<div class="w-24 h-1 bg-primary mt-6"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group relative overflow-hidden border border-outline-variant/20 h-[400px] rounded scroll-reveal fade-up delay-300 reveal-hidden reveal-visible">
+<img alt="Modern Farmhouse Installation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A wide-angle, slightly desaturated photograph of a luxury modern farmhouse showcasing a complete seamless gutter system in matte black, contrasting elegantly with white siding. The image is taken during the golden hour, casting long architectural shadows. The aesthetic emphasizes high-end real estate and precise exterior detailing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoofety3CWFUAH3ioX-xhwhBYN05PvAOuUUfDIackZroazzXS3XF0zaTOrhePl5NqKbZTmH29Y1epYhb--pRqFaO4BtMlIKxbVgUL3GDyGoGGALMQz227fiJy1ucfxhPrR7tgp-G7uuGiouPDzya2kpxMzO0rcBd6uVxqPod_0MIQMUBSmNDx37l3VYSPGzTnUgNHebuh1u8ZDjYBeZs1HvKJ8yscZKDvo4_e4KrJQqxo09MMMQPbt_A"/>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent">
+<span class="inline-block px-3 py-1 bg-surface-container text-primary font-label-caps text-label-caps uppercase mb-2 rounded-sm border border-primary/20">Matte Black</span>
+<h3 class="text-white font-headline-md text-headline-md">Modern Farmhouse</h3>
+</div>
+</div>
+<div class="group relative overflow-hidden border border-outline-variant/20 h-[400px] rounded scroll-reveal fade-up delay-500 reveal-hidden reveal-visible">
+<img alt="Copper Gutter Installation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A detailed shot of a copper seamless gutter system installed on a historic luxury estate. The copper shows a slight, rich patina. The lighting is soft and diffused, emphasizing the premium material and expert craftsmanship against classical stone architecture. The mood is authoritative and enduring." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOO8-rT1dsXVQ9swh0ArfqSS01LkeGK1ytwKzu8bLoRi81iGUcMbV_m_TBqAxPxyHUej_leSevwns7CMj2rvZSW5-Ytlc_kdzB3e08Cc-3VQYr5lTL8FTFFmJT262Q1COqXw52AM6KYMfOqh1NorrOCf13Z9AeZ0SVpFL9zZLIB2HsR-wkRvW96fusF5E313RTrEq5brBJGIdcXoTF0LgAbdWCuX6Rl8eBf0Boah8vpU2q7o0sMgU62w"/>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent">
+<span class="inline-block px-3 py-1 bg-surface-container text-primary font-label-caps text-label-caps uppercase mb-2 rounded-sm border border-primary/20">Copper Patina</span>
+<h3 class="text-white font-headline-md text-headline-md">Heritage Estate</h3>
+</div>
+</div>
+<div class="group relative overflow-hidden border border-outline-variant/20 h-[400px] rounded scroll-reveal fade-up delay-700 reveal-hidden reveal-visible">
+<img alt="Concealed Modern Gutter" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An ultra-modern, minimalist home featuring concealed, custom-color-matched seamless gutters that blend perfectly with the dark gray exterior stucco. The image is crisp, high-contrast, and structural, focusing on the seamless integration of utility and design in contemporary architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN416aDaOBxaYO4oZHxFXOnGqyKctZUwKc-abRPETVfP1wXFtAnJa6o4B33gSRgYyx_KFW2Gg2rSfKeQt_JZRIwCJueAJVkYJXOEyraFsd5HH-PfnCgAZyJNEiJNgHW5koMR2nm8OGoHd8wch77o9pgZ1Ix32x5P7LsKrmB94o-5tSACLRxqDQ4T1C07_xJ93Nwl4ntWHq9G2PNJc9GXxRwbdW-Y9lXJMBBfCpjTPkH8yx9Gytm8lCGA"/>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent">
+<span class="inline-block px-3 py-1 bg-surface-container text-primary font-label-caps text-label-caps uppercase mb-2 rounded-sm border border-primary/20">Custom Match</span>
+<h3 class="text-white font-headline-md text-headline-md">Minimalist Integration</h3>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap border-t border-outline/20 bg-on-background dark:bg-surface-container-lowest">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-2">
+<div class="font-headline-lg text-headline-lg font-extrabold text-background dark:text-on-background mb-4">
+                    Professional Exteriors
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                    Architectural Integrity &amp; Precision. We build to last, protecting your investments against the elements.
+                </p>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-caps text-label-caps text-on-surface-variant mb-4">Legal &amp; Support</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-surface-variant/60 hover:text-background hover:text-tertiary-fixed transition-colors duration-200 focus:ring-2 focus:ring-primary-fixed outline-none rounded-sm" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-surface-variant/60 hover:text-background hover:text-tertiary-fixed transition-colors duration-200 focus:ring-2 focus:ring-primary-fixed outline-none rounded-sm" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-surface-variant/60 hover:text-background hover:text-tertiary-fixed transition-colors duration-200 focus:ring-2 focus:ring-primary-fixed outline-none rounded-sm" href="#">Warranty Details</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-caps text-label-caps text-on-surface-variant mb-4">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-surface-variant/60 hover:text-background hover:text-tertiary-fixed transition-colors duration-200 focus:ring-2 focus:ring-primary-fixed outline-none rounded-sm" href="#">Service Areas</a></li>
+</ul>
+</div>
+</div>
+<div class="px-margin-desktop max-w-container-max mx-auto mt-16 pt-8 border-t border-outline/20 flex justify-between items-center">
+<p class="font-body-md text-body-md text-primary-fixed dark:text-primary">
+                © 2024 Professional Exteriors. Architectural Integrity &amp; Precision.
+            </p>
+</div>
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(element => {
+            element.classList.add('reveal-hidden');
+            observer.observe(element);
+        });
+    });
+</script>
+</body></html>
