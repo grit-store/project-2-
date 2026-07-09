@@ -22,3 +22,6 @@ Atlanta's premium exterior & roofing experts website.
 - `privacy.html` — Privacy Policy
 - `terms.html` — Terms of Service
 - `warranty.html` — Warranty Details
+
+## Deploy Status
+Live link: https://grit-store.github.io/project-2-/
